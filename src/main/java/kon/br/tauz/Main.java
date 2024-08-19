@@ -2,6 +2,7 @@ package kon.br.tauz;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -53,6 +54,30 @@ public class Main extends JavaPlugin {
                     else {
                         p.sendMessage(ChatColor.RED + "Sua fome já está cheia");
                     }
+                }
+
+                if (command.getName().equalsIgnoreCase("gm") || command.getName().equalsIgnoreCase("gamemode")) {
+
+                    // Verifica se o player possui a permissão para usar o comando /gm
+                    if (!p.hasPermission("gamemode.use")) {
+                        p.sendMessage(ChatColor.RED + "Você não possui permissão para usar este comando");
+                    }
+                    else {
+                        // Cria uma variavel temporária para analisar o primeiro argumento pós uso do comando
+                        String action = args[0];
+
+                        // Verifica se o argumento é 1 ou creative e seta o GameMode creative
+                        if (action.equalsIgnoreCase("1") || action.equalsIgnoreCase("creative")) {
+                            p.sendMessage(ChatColor.GREEN + "Seu modo de jogo foi alterado para CRIATIVO");
+                            p.setGameMode(GameMode.CREATIVE);
+                        }
+                        // Verifica se o argumento é 0 ou survive e seta o GameMode survive
+                        else if (action.equalsIgnoreCase("0") || action.equalsIgnoreCase("survive")) {
+                            p.sendMessage(ChatColor.GREEN + "Seu modo de jogo foi alterado para SURVIVE");
+                            p.setGameMode(GameMode.SURVIVAL);
+                        }
+                    }
+
                 }
 
 
