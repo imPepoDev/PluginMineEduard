@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PluginEduard">
+    <output-path>$PROJECT_DIR$/out/artifacts/PluginEduard</output-path>
+    <root id="archive" name="PluginEduard.jar">
+      <element id="module-output" name="EduardoAprendizado" />
+    </root>
+  </artifact>
+</component>

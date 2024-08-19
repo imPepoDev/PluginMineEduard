@@ -1,0 +1,13 @@
+name: tauz
+main: kon.br.tauz.Main
+version: 1.0
+author: tauz
+description: Plugin de Aprendizado
+
+commands:
+  ajuda:
+    aliases: [ help, ajd ]
+  heal:
+    aliases: [ curar ]
+  feed:
+    aliases: [ feed ]
