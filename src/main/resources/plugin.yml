@@ -11,3 +11,5 @@ commands:
     aliases: [ curar ]
   feed:
     aliases: [ feed ]
+  gm:
+    aliases: [ gamemode ]
