@@ -76,6 +76,14 @@ public class Main extends JavaPlugin {
                             p.sendMessage(ChatColor.GREEN + "Seu modo de jogo foi alterado para SURVIVE");
                             p.setGameMode(GameMode.SURVIVAL);
                         }
+
+                        else if (action == "") {
+                            p.sendMessage(ChatColor.RED + "Insira um modo de jogo especifico, tal como 1 (Criativo) ou 0 (Survive)");
+                        }
+
+                        else {
+                            p.sendMessage(ChatColor.RED + "Modo de jogo não identificado.");
+                        }
                     }
 
                 }
